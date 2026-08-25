@@ -1,0 +1,24 @@
+{
+  "name": "demo-pipeline",
+  "steps": [
+    {
+      "id": "analyze",
+      "type": "delegate",
+      "cli": "claude",
+      "out": "analysis.txt",
+      "prompt": "In two sentences, describe what a Fibonacci sequence is. Output only those two sentences, nothing else."
+    },
+    {
+      "id": "review-gate",
+      "type": "gate",
+      "proposal": "The analysis step produced:\n\n{analysis.txt}\n\nProceed to generate the code file based on it?"
+    },
+    {
+      "id": "generate",
+      "type": "delegate",
+      "cli": "claude",
+      "out": "generate.txt",
+      "prompt": "Using this description:\n{analysis.txt}\n\nCreate the file C:\\dev\\AOE-test\\orch_demo.py containing a small Python fibonacci(n) function with a docstring. Then reply with exactly: DONE."
+    }
+  ]
+}

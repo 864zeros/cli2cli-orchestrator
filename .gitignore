@@ -1,0 +1,19 @@
+# python venv & caches
+venv/
+__pycache__/
+*.pyc
+
+# local state / runs
+*.db
+*.log
+runs/
+
+# env / secrets
+.env
+.env.*
+
+# os / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
