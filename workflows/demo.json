@@ -18,7 +18,7 @@
       "type": "delegate",
       "cli": "claude",
       "out": "generate.txt",
-      "prompt": "Using this description:\n{analysis.txt}\n\nCreate the file C:\\dev\\AOE-test\\orch_demo.py containing a small Python fibonacci(n) function with a docstring. Then reply with exactly: DONE."
+      "prompt": "Using this description:\n{analysis.txt}\n\nCreate the file C:\\dev\\orch-test\\orch_demo.py containing a small Python fibonacci(n) function with a docstring. Then reply with exactly: DONE."
     }
   ]
 }

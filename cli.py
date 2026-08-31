@@ -3,8 +3,8 @@ cli.py — standalone entry point for the orchestrator.
 
     python cli.py run <workflow.json> [--yes] [--cwd DIR]
 
-Runs a multi-CLI workflow with typed conversations, entirely independent of the
-AOE appliance (no Telegram). Gates are decided on the console unless --yes.
+Runs a multi-CLI workflow with typed conversations, entirely independent of any
+front-end appliance (no Telegram). Gates are decided on the console unless --yes.
 
     python cli.py types           # list registered conversation types
 """

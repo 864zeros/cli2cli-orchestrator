@@ -3,7 +3,7 @@ client.py — persistent MCP client for the cli2cli-mcp substrate.
 
 The orchestrator drives real CLI sessions by calling the substrate's tools. The
 MCP stdio session is held open inside ONE long-lived task (anyio scopes must open
-and close in the same task), matching the pattern proven in the AOE appliance.
+and close in the same task), matching the pattern proven in a front-end appliance.
 """
 from __future__ import annotations
 

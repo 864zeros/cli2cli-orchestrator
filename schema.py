@@ -4,7 +4,7 @@ schema.py — the conversation contract (the lingua franca of the orchestrator).
 Messages are typed by a PERFORMATIVE (task, result, propose, approve, ...), and a
 CONVERSATION TYPE is a small state machine that enforces which performatives are
 legal and what may follow what. This is the stable contract all three products
-(cli2cli-mcp substrate, this orchestrator, the AOE appliance) speak, so they stay
+(cli2cli-mcp substrate, this orchestrator, a front-end appliance) speak, so they stay
 independently valuable yet compose.
 
 The catalog is EXTENSIBLE: new conversation types are declared as data and

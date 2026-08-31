@@ -3,17 +3,17 @@
 The middle of the three-piece stack. A **standalone** engine that coordinates
 multiple real CLI sessions into a workflow using a **typed conversation protocol**,
 driving them through the [`cli2cli-mcp`](../cli2cli-mcp) substrate. Independently
-valuable: it runs from its own CLI with no AOE / Telegram.
+valuable: it runs from its own CLI with no appliance / Telegram.
 
 ```
-  front-ends (AOE, cron, CLI)  ──►  orchestrator  ──►  cli2cli-mcp  ──►  claude / gemini / shell
+  front-ends (appliance, cron, CLI)  ──►  orchestrator  ──►  cli2cli-mcp  ──►  claude / gemini / shell
         (publish tasks)              (this)             (substrate)
 ```
 
 ## The three pieces
 - **`cli2cli-mcp`** — pure substrate: drive any interactive CLI over MCP.
 - **`orchestrator`** (here) — the engine: bus + conversation schema + workflow runtime.
-- **`cli2cli-aoe`** — the appliance: phone/HITL/audit/persistence, a front-end on this.
+- **an appliance layer** — phone/HITL/audit/persistence, a front-end on this.
 
 Each stands alone; they compose through the **conversation contract** (`schema.py`).
 
@@ -53,5 +53,5 @@ Fibonacci → artifact → (gate) → the second uses that artifact to write a c
 ## Status
 v0.1 — sequential workflows, `delegate` + `gate`, filesystem artifact passing, SQLite
 bus. Verified end-to-end (standalone). Next: parallel/fan-out steps, the `critique`
-loop type, a participation-MCP so worker agents emit typed messages natively, and the
-AOE re-plumbed to publish tasks onto this bus.
+loop type, a participation-MCP so worker agents emit typed messages natively, and
+a front-end appliance re-plumbed to publish tasks onto this bus.
